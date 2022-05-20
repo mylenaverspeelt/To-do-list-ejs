@@ -1,0 +1,41 @@
+<!-- <%= %> essa é a sintaxe pra inserir valores de variaveis com o ejs -->
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1>Hoje é dia <%= dia %>!</h1>
+    </div>
+
+    <!-- loop no array lista que o server mandou pra ca como """"props""" acessando e exibindo na tela como um list item o valor que ta no i -->
+
+    <div class="box">
+        <% for(i=0; i < lista.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= lista[i] %>
+                </p>
+            </div>
+            <% } %>
+
+
+    <!-- o form tem o metodo post pois vai enviar de volta pro srrvidor as info q o usuario colocar, o action é a localização de onde o request vai ser feito-->
+    <form action="/" method="post" class="item">
+        <input type="text" name="inputUsuario" placeholder="Novo Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+    </form>
+</div>
+
+</body>
+
+</html>
