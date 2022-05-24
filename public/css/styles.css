@@ -66,8 +66,8 @@ form {
 }
 
 button {
-  min-height: 4rem;
-  width: 4rem;
+  min-height: 3rem;
+  width: 3.5rem;
   border-radius: 50%;
   border-color: transparent;
   background-color: var(--light-purple);
